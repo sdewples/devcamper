@@ -4,7 +4,10 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
 const fileupload = require('express-fileupload');
+<<<<<<< HEAD
 const cookieParser = require('cookie-parser');
+=======
+>>>>>>> 18fd76620c46c80f5134ba2ce0a410de08605c14
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 
@@ -26,9 +29,12 @@ const app = express();
 // Body Parser
 app.use(express.json());
 
+<<<<<<< HEAD
 // Cookie Parser
 app.use(cookieParser());
 
+=======
+>>>>>>> 18fd76620c46c80f5134ba2ce0a410de08605c14
 // logs using morgan module in development mode
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));

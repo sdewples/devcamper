@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "devcamper_api",
   "version": "1.0.0",
@@ -26,3 +27,32 @@
     "nodemon": "^1.19.4"
   }
 }
+=======
+{
+  "name": "devcamper_api",
+  "version": "1.0.0",
+  "description": "Devcamper backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "author": "Daniel Wilczynski",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6-alpha.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.7",
+    "morgan": "^1.9.1",
+    "node-geocoder": "^3.25.0",
+    "slugify": "^1.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
+>>>>>>> 18fd76620c46c80f5134ba2ce0a410de08605c14
