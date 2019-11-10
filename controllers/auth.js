@@ -3,11 +3,7 @@ const ErrorResponse = require('../utils/errorResponse');
 const User = require('../models/User');
 
 // @desc      Register user
-<<<<<<< HEAD
 // @route     POST /api/v1/auth/register
-=======
-// @route     GET /api/v1/auth/register
->>>>>>> 18fd76620c46c80f5134ba2ce0a410de08605c14
 // @access    Public
 exports.register = asyncHandler(async (req, res, next) => {
   const { name, email, password, role } = req.body;
@@ -20,7 +16,6 @@ exports.register = asyncHandler(async (req, res, next) => {
     role
   });
 
-<<<<<<< HEAD
   sendTokenResponse(user, 200, res);
 });
 
@@ -75,10 +70,16 @@ const sendTokenResponse = (user, statusCode, res) => {
       token
     });
 }
-=======
-  // Create token
-  const token = user.getSignedJwtToken();
 
-  res.status(200).json({ success: true, token });
+// @desc      Get current logged in user
+// @route     GET /api/v1/auth/me
+// @access    Private
+
+exports.getMe = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.user.id);
+
+  res.status(200).json({
+    success: true,
+    data: user
+  })
 });
->>>>>>> 18fd76620c46c80f5134ba2ce0a410de08605c14
